@@ -1,0 +1,49 @@
+{
+  "author": {
+    "email": "prefinem@gmail.com",
+    "name": "Prefinem",
+    "url": "http://prefinem.com"
+  },
+  "description": "Lambda Helpers that are completely Async / Await capable",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^23.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.0",
+    "eslint-config-prettier": "^2.9.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-eslint-if-fixed": "^1.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "jest": "^23.0.0",
+    "pkg-ok": "^2.1.0",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/DistributorCentral/rackspace-email-api-wrapper",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "name": "rackspace-email-api-wrapper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DistributorCentral/rackspace-email-api-wrapper"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "clean": "eslint src/*.js --fix && prettier --config ./.prettierrc.json --write \"src/*.js\"",
+    "precommit": "eslint src/*.js --fix && pretty-quick --staged && gulp build",
+    "prepublishOnly": "gulp build && pkg-ok",
+    "watch": "gulp watch"
+  },
+  "version": "0.0.1"
+}
